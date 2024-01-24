@@ -1,7 +1,6 @@
 import java.util.Locale;
-import java.util.spi.LocaleServiceProvider;
 
-public class Main {
+public class ExPrintf {
     public static void main(String[] args) {
 
         String product1 = "Computer";
