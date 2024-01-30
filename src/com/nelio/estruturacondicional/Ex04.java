@@ -8,24 +8,22 @@ public class Ex04 {
         //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
         Scanner scanner = new Scanner(System.in);
 
-        double horaInicial, horaFinal, duracao;
+        int horaInicial = scanner.nextInt();
+        int horaFinal = scanner.nextInt();
+        int duracao;
 
+        if (horaInicial < horaFinal) {
+            duracao = horaFinal - horaInicial;
 
-        System.out.println("Digite a hora inicial ");
-        horaInicial = scanner.nextDouble();
-        System.out.println("Digite a hora final");
-        horaFinal = scanner.nextDouble();
-
-        duracao = horaFinal - horaInicial ;
-
-        if (duracao < 1) {
-            System.out.println("Tempo insuficiente");
-        } else if (duracao >= 1) {
-            System.out.println("Hrs: " + duracao);
         } else {
-            System.out.println("Tempo limite de 24hrs exedido");
+            duracao = 24 - horaInicial + horaFinal;
+
         }
+
+        System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
 
 
     }
+
+
 }
